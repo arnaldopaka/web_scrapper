@@ -15,8 +15,20 @@ selector = 'article>a'
 #print(result)
 
 #Busca Cambios Bna
-url = 'http://www.bpc.ao/bpc/pt/'
-selector = '.cambio'
+#url = 'http://www.bpc.ao/bpc/pt/'
+#selector = '.cambio'
+#Resultado em HTML
+#result = wb.get_items_html(url,selector)
+#print(result)
+#Resultado em Texto
+#result = wb.get_items_text(url,selector)
+#print('\n')
+#print(result)
+
+#Busca Cambios Bna
+url = 'https://agt.minfin.gov.ao/PortalAGT/#!/'
+#selector = '.table .table-condensed .table-blocked'
+selector = '.table.table-condensed.table-blocked'
 #Resultado em HTML
 result = wb.get_items_html(url,selector)
 print(result)
@@ -24,3 +36,4 @@ print(result)
 result = wb.get_items_text(url,selector)
 print('\n')
 print(result)
+
