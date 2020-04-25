@@ -2,6 +2,7 @@
 import requests as rst
 from selenium import webdriver
 import chromedriver_binary
+from selenium.webdriver.chrome.options import Options
 import time
 import bs4
 
@@ -20,8 +21,11 @@ class WebScrapper:
         if url == self.url:
             return self.html
         else:
-            driver = webdriver.Chrome()
+           # chrome_options = Options()
+           # chrome_options.add_argument("--headless")
+            driver = webdriver.PhantomJS()
             driver.get(url)
+            driver.save_screenshot("hello.png")
             html = driver.page_source
             self.html = html
             self.url = url
